@@ -1,0 +1,10 @@
+tornado里面的cookie
+
+使用set_cookie方法设置
+参数:
+name:cookie名
+value:cookie值
+domain:提交cookie时匹配的域名
+path:提交cookie时匹配的路径
+expires:cookie设置有效时间，可以是时间戳整数，时间元组，datetime类型，为UTC类型
+expires_days:cookie有效期天数，优先级低于expires

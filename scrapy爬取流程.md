@@ -1,0 +1,7 @@
+- 引擎打开一个网站，找到处理该网站的Spider并向该spider请求第一个要爬取的url
+- 调度器返回下一个要爬取的url给引擎,引擎将url通过下载中间件转发给下载器
+- 页面下载完毕,下载器生成一个该页面的Response,并通过中间件(返回response)发送给引擎
+- 引擎从下载器接收到response并通过spider中间件发给spider处理
+- spider处理response并返回爬取到item及新的request给引擎
+- 引擎将spider爬取到的item给item pipeline,将(spider返回的)request给调度器
+- 重复直到调度器里面没有更多的request,关闭该网站
